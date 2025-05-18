@@ -1,0 +1,105 @@
+\documentclass[
+	a4paper, % Paper size, use either a4paper or letterpaper
+	12pt, % Default font size, can also use 11pt or 12pt, although this is not recommended
+	unnumberedsections, % Comment to enable section numbering
+	twoside, % Two side traditional mode where headers and footers change between odd and even pages, comment this option to make them fixed
+    xcolor = {dvipsnames}
+]{class}
+
+\usepackage{amssymb}
+\usepackage[page,toc,titletoc,title]{appendix}
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage{float}
+\usepackage{nicematrix}
+\usepackage{ragged2e}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage[utf8]{inputenc}
+\usepackage{filecontents}
+\usepackage{listings}
+\usepackage{pgfplots}
+\usepackage{polski}
+\usepackage{varwidth}
+\usepackage{enumitem}
+\usepackage{svg}
+\usepackage{censor}
+\pgfplotsset{compat=newest}
+\usepgfplotslibrary{patchplots}
+
+\usetikzlibrary{calc}
+\addbibresource{main.bib} % BibLaTeX bibliography file
+
+\runninghead{Short title} % A shortened article title to appear in the running head, leave this command empty for no running head
+
+\footertext{\textit{Université de Rennes - ISTIC}} % Text to appear in the footer, leave this command empty for no footer text
+
+\setcounter{page}{1} % The page number of the first page, set this to a higher number if the article is to be part of an issue or larger work
+
+
+\lstset{
+    basicstyle   = \ttfamily,
+    frame=tb,
+    tabsize=2,
+    showstringspaces=false,
+    numbers=left,
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hyperef links and metadata setup
+%
+\hypersetup{
+    unicode=true,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={RES - TP1},    % title
+    pdfauthor={Alex Videcoq, Nicolas Merrer},     % author
+    pdfsubject={RES},   % subject of the document
+    pdfnewwindow=true,      % links in new PDF window
+}
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{This\\---\\ is the title} % Article title, use manual lines breaks (\\) to beautify the layout
+
+% Authors are listed in a comma-separated list with superscript numbers indicating affiliations
+% \thanks{} is used for any text that should be placed in a footnote on the first page, such as the corresponding author's email, journal acceptance dates, a copyright/license notice, keywords, etc
+\author{%
+	Author One\textsuperscript{1}, Author Two\textsuperscript{2}
+}
+
+% Affiliations are output in the \date{} command
+\date{\footnotesize\textsuperscript{\textbf{1}}author.one@etudiant.univ-rennes.fr\\\footnotesize\textsuperscript{\textbf{2}}author.two@etudiant.univ-rennes.fr}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    \noindent This is an abstract. Lorem Ipsum ...
+\end{abstract}
+
+\section{This is a section}
+\subsection{This is a subsection}
+
+
+\begin{figure}[H] % Single column figure
+    \includegraphics[width=\linewidth]{assets/sequence.png}
+	\caption{This is a figure caption}
+	\label{fig:sequence-ARP-ICMP}
+\end{figure}
+
+\pagebreak
+\section{Appendix}\label{appendices}
+Captures d'écran :
+\begin{figure}[H] % Two column figure (notice the starred environment)
+    \includegraphics[width=2\linewidth]{assets/wireshark-screen-ARP-ICMP.png}
+    \caption{This figure spans two columns}
+    \label{fig:screen-wireshark-ARP-ICMP}
+\end{figure}
+%----------------------------------------------------------------------------------------
+\end{document}
