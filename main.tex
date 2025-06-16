@@ -64,42 +64,37 @@
 %	TITLE SECTION
 %----------------------------------------------------------------------------------------
 
-\title{This\\---\\ is the title} % Article title, use manual lines breaks (\\) to beautify the layout
+\title{This is a\\---\\collection of quote} % Article title, use manual lines breaks (\\) to beautify the layout
 
 % Authors are listed in a comma-separated list with superscript numbers indicating affiliations
 % \thanks{} is used for any text that should be placed in a footnote on the first page, such as the corresponding author's email, journal acceptance dates, a copyright/license notice, keywords, etc
 \author{%
-	Author One\textsuperscript{1}, Author Two\textsuperscript{2}
+	Alex Videcoq\textsuperscript{1}
 }
 
 % Affiliations are output in the \date{} command
-\date{\footnotesize\textsuperscript{\textbf{1}}author.one@etudiant.univ-rennes.fr\\\footnotesize\textsuperscript{\textbf{2}}author.two@etudiant.univ-rennes.fr}
+\date{\footnotesize\textsuperscript{\textbf{1}}alex.videcoq@etudiant.univ-rennes.fr}
 
 \begin{document}
 
 \maketitle
 
 \begin{abstract}
-    \noindent This is an abstract. Lorem Ipsum ...
+    \noindent This document is a collection of quotes I find interesting and think I can reuse at some point.\\
+    It is primarily made for me, but everyone is welcome to contribute.
 \end{abstract}
 
-\section{This is a section}
-\subsection{This is a subsection}
-
-
-\begin{figure}[H] % Single column figure
-    \includegraphics[width=\linewidth]{assets/sequence.png}
-	\caption{This is a figure caption}
-	\label{fig:sequence-ARP-ICMP}
-\end{figure}
+\section{On AI}
+\textit{Once men turned their thinking over to machines in the hope that this would set them free.
+But that only permitted other men with machines to enslave them.}\par
+\cite{herbert_dune_1965} \par
+\noindent
+\textit{Machines were mice and men were lions once upon a time\\
+But now that it's the opposite its twice upon a time}\par
+Moondog, Stamping Ground, 1970
 
 \pagebreak
-\section{Appendix}\label{appendices}
-Captures d'écran :
-\begin{figure}[H] % Two column figure (notice the starred environment)
-    \includegraphics[width=2\linewidth]{assets/wireshark-screen-ARP-ICMP.png}
-    \caption{This figure spans two columns}
-    \label{fig:screen-wireshark-ARP-ICMP}
-\end{figure}
+\printbibliography
+
 %----------------------------------------------------------------------------------------
 \end{document}
